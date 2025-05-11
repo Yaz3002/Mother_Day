@@ -7,17 +7,18 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Pacifico', cursive;
+  overflow-x: hidden;
 }
 
-/* Enlaces tipo página completa */
+/* Estilos base para enlaces pantalla completa */
 a {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Pacifico', cursive;
   color: #fff;
-  font-size: 7vw; /* Escala mejor en móviles */
+  font-size: 8vw;
   text-align: center;
   padding: 5vw;
   position: relative;
@@ -25,56 +26,11 @@ a {
   transition: font-size 0.3s ease;
 }
 
+/* Colores por sección */
 a:nth-child(1) { background: #37dd87; }
 a:nth-child(2) { background: #F06292; }
 a:nth-child(3) { background: #AB47BC; }
 a:nth-child(4) { background: #26C6DA; }
 a:nth-child(5) { background: #8BC34A; }
 a:nth-child(6) { background: #E64A19; }
-a:nth-child(7) { background: #CB0E40; }
-a:nth-child(8) { background: #936d77; }
-
-a::after {
-  content: '';
-  background: url(http://www.clker.com/cliparts/n/6/Z/t/h/h/flower-md.png) no-repeat center center;
-  background-size: contain;
-  height: 25vmin;
-  width: 25vmin;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  animation: spin 10s linear infinite;
-}
-
-a:nth-child(even)::after {
-  background: url(http://www.clker.com/cliparts/n/2/M/X/a/P/purple-flower-hi.png) no-repeat center center !important;
-  background-size: contain !important;
-  animation: spin 10s linear reverse infinite !important;
-}
-
-a:nth-child(6)::after {
-  display: none;
-}
-
-@keyframes spin {
-  0% { transform: translateX(-50%) rotate(0deg); }
-  50% { transform: translateX(-50%) rotate(180deg); }
-  100% { transform: translateX(-50%) rotate(360deg); }
-}
-
-/* Imagen final centrada */
-img.centrada {
-  max-width: 90vw;
-  max-height: 90vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Créditos */
-.made-with-love {
-  position: fixed;
-  left:
+a:nth-child(
