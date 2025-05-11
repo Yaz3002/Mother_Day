@@ -7,8 +7,9 @@
 body {
   font-family: 'Pacifico', cursive;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
   color: #fff;
+  position: relative;
 }
 
 .container {
@@ -35,18 +36,41 @@ a:hover {
   transform: scale(1.05);
 }
 
-a:nth-child(1) { background: #FF4081; }
-a:nth-child(2) { background: #FFAB40; }
-a:nth-child(3) { background: #FFC107; }
-a:nth-child(4) { background: #40C4FF; }
-a:nth-child(5) { background: #7E57C2; }
-a:nth-child(6) { background: #66BB6A; }
-a:nth-child(7) { background: #FF7043; }
+a:nth-child(1) { background: #ffb6b9; }
+a:nth-child(2) { background: #fae3d9; }
+a:nth-child(3) { background: #bbded6; }
+a:nth-child(4) { background: #8ac6d1; }
+a:nth-child(5) { background: #ffe2e2; }
+a:nth-child(6) { background: #d5a6bd; }
+a:nth-child(7) { background: #b0c4de; }
 
 img.centrada {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
+}
+
+/* Animación de corazones */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.hearts::before {
+  content: "❤️❤️❤️❤️❤️";
+  font-size: 30px;
+  position: absolute;
+  animation: heartFall 10s linear infinite;
+}
+
+@keyframes heartFall {
+  0% { transform: translateY(-100%); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
 }
 
 .video-container {
